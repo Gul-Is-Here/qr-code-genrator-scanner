@@ -15,7 +15,9 @@ class _ScanQrState extends State<ScanQr> {
 
   // Function to launch the URL
   Future<void> _launchURL(String url) async {
+    // ignore: deprecated_member_use
     if (await canLaunch(url)) {
+      // ignore: deprecated_member_use
       await launch(url);
     } else {
       setState(() {
